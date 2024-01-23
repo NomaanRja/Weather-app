@@ -5,12 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App - tutorial</title>
     <link rel="stylesheet" href="style.css">
-    <script src="/script.js"></script>
+    
 </head>
 <body>
+
+    <header>
+        <nav>
+            <div class="logo">Check Weather</div>
+            <ul>
+                <li> <a href="/">Home</a></li>
+                <li> <a href="/">About</a></li>
+                <li> <a href="/">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
    <div class="card">
     <div class="search">
-        <input type="text" placeholder="enter city name"
+        <input type="text" id="inpt" placeholder="enter city name"
         spellcheck="false">
         <button><img src="/images/search.png" ></button>
     </div>
@@ -40,6 +53,13 @@
     </div>
    
     </div>
-   </div> 
+   </div>
+
+   </main>
+
+  
+   <script src="/script.js"></script> 
+
+   
 </body>
 </html>

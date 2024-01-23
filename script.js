@@ -2,13 +2,14 @@
     
 const apikey = "d2c4746aa1d8758054e233226368de3f";
 const apiurl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q="; 
-const seachbox = document.querySelector(".search input");
+const seachbox = document.getElementById("inpt");
 const seachbtn = document.querySelector(".search button");
 const weathericon = document.querySelector(".weather-icon") ;
 
 
-async function checkweather(city){
-    const response = await fetch(apiurl + city + `&appid=${apikey}`);
+
+async function checkweather(){
+    const response = await fetch(apiurl + seachbox.value + `&appid=${apikey}`);
 
      if(response.status ==404){
         document.querySelector(".error").style.display = "block"
@@ -51,6 +52,7 @@ document.querySelector(".error").style.display ="none"
 
 
 }
-seachbtn.addEventListener("click",()=>{
-    checkweather(seachbox.value);
+
+seachbtn.addEventListener('click' , ()=>{
+    checkweather()
 })
